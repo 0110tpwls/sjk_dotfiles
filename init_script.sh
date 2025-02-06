@@ -39,3 +39,11 @@ ln -s ~/sjk_dotfiles/starship.toml ~/.config/starship.toml
 
 source ~/.config/fish/config.fish
 source ~/.bashrc
+
+# how to add ssh key to github
+# 1. ssh-keygen -t rsa -b 4096 -C "0110tpwls@gmail.com" #all enter
+# 2. copy rsa.pub cat ~/.ssh/id_rsa.pub
+# 3. go to github -> settings -> ssh and gpg keys -> new ssh key -> paste the rsa.pub content
+# 4. ssh -T git@github.com
+# 5. git config --global user.name "0110tpwls"
+# 6. git config --global user.email "0110tpwls@gmail.com"
