@@ -9,14 +9,14 @@ $hostname\
 $directory\
 $git_branch\
 $git_commit\
-$time
+$time\
+$python
 $shell\
 $character"""
 
 # Disable the line break between the first and second prompt lines
 [line_break]
 disabled = false
-
 
 [time]
 format = '[\[$time\]]($style) '
