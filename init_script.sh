@@ -10,7 +10,7 @@ curl -Ls https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xvj ~/bin/
 
 # Install pixi
 echo "Installing pixi..."
-curl -fsSL https://pixi.sh/install.sh | fish
+curl -fsSL https://pixi.sh/install.sh | bash
 
 # apply fish config
 echo "Applying fish config..."

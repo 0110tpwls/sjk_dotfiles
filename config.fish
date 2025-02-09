@@ -23,6 +23,7 @@ export VLLM_WORKER_MULTIPROC_METHOD=spawn
 export BNB_CUDA_VERSION=125
 
 export CUDA_HOME='/opt/ohpc/pub/apps/cuda/12.5'
+export CONDA_PREFIX=$CUDA_HOME
 
 alias jnb="jupyter notebook --ip 0.0.0.0 --no-browser"
 alias conda="micromamba"

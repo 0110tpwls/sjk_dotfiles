@@ -6,6 +6,7 @@ command_timeout = 2000
 format = """\
 $username\
 $hostname\
+$singularity\
 $directory\
 $git_branch\
 $git_commit\
