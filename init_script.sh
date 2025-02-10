@@ -37,6 +37,9 @@ echo "Updating starship config..."
 rm ~/.config/starship.toml
 ln -s ~/sjk_dotfiles/starship.toml ~/.config/starship.toml
 
+
+ln -s ~/sjk_dotfiles/.gitconfig ~/.gitconfig
+
 source ~/.config/fish/config.fish
 source ~/.bashrc
 
