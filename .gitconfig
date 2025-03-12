@@ -3,3 +3,5 @@
 	email = 0110tpwls@gmail.com
 [safe]
 	directory = /home/jerry0110/sjk_dotfiles
+[init]
+	defaultBranch = main

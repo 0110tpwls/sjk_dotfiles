@@ -25,7 +25,7 @@ export BNB_CUDA_VERSION=125
 export CUDA_HOME='/opt/ohpc/pub/apps/cuda/12.5'
 export CONDA_PREFIX=$CUDA_HOME
 
-alias jnb="jupyter notebook --ip 0.0.0.0 --no-browser"
+alias jnb="jupyter notebook --ip 0.0.0.0 --no-browser --port 9090"
 alias conda="micromamba"
 alias ca="micromamba activate"
 alias cda="micromamba deactivate"
