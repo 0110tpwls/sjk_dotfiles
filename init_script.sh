@@ -1,12 +1,15 @@
 #! /bin/bash
 
+cd ~
+
 # Install rust
 echo "Installing rust..."
 curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 
 # Install micromamba
 echo "Installing micromamba..."
-curl -Ls https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xvj ~/bin/micromamba
+mkdir -p ~/bin
+curl -Ls https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xvj bin/micromamba
 
 # Install pixi
 echo "Installing pixi..."
@@ -14,6 +17,7 @@ curl -fsSL https://pixi.sh/install.sh | bash
 
 # apply fish config
 echo "Applying fish config..."
+mkdir -p ~/.config/fish
 rm ~/.config/fish/config.fish
 ln -s ~/sjk_dotfiles/config.fish ~/.config/fish/config.fish
 source ~/.config/fish/config.fish
@@ -37,7 +41,17 @@ echo "Updating starship config..."
 rm ~/.config/starship.toml
 ln -s ~/sjk_dotfiles/starship.toml ~/.config/starship.toml
 
+#update tmux config
+echo "Updating tmux config..."
+rm ~/.config/tmux/tmux.conf
+rm ~/.config/tmux/tmux.conf.local
+ln -s ~/sjk_dotfiles/tmux.conf ~/.config/tmux/tmux.conf
+ln -s ~/sjk_dotfiles/tmux.conf.local ~/.config/tmux/tmux.conf.local
+tmux source-file ~/.config/tmux/tmux.conf
 
+#update git config
+echo "Updating git config..."
+rm ~/.gitconfig
 ln -s ~/sjk_dotfiles/.gitconfig ~/.gitconfig
 
 source ~/.config/fish/config.fish

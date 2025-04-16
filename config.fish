@@ -58,3 +58,4 @@ set -gx MAMBA_ROOT_PREFIX "$HOME/micromamba";
 
 eval "$MAMBA_EXE" shell hook --shell fish | source
 # <<< micromamba initialize <<<
+
